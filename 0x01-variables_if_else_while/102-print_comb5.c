@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
 * main - prints 4 digits separated by space and comma
 *
@@ -7,37 +8,34 @@
 */
 int main(void)
 {
-int num1, num2, num3, num4;
-num1, num2, num3, num4 = 0;
-while (num1 <= '9')
+	int i, j;
+	int a, b, c, d;
+
+for (i = 0; i < 100; i++)
 {
-while (num2 <= '9')
+a = i / 10;
+b = i % 10;
+for (j = 0; j < 100; j++)
 {
-while (num3 <= '9')
+c = j / 10;
+d = j % 10;
 {
-while (num4 <= '9')
-{
-if (((num3 + num4) > (num1 + num2) && num3 >= num1) || num1 < num3)
-{ putchar(num1);
-	putchar(num2);
-	putchar(' ');
-	putchar(num3);
-	putchar(num4);
-if (num1 + num2 + num3 + num4 == '179' && num1 == '9')
-{break;
-}
-else
+if (a < c || (a == c && b < d))
+{putchar(a + '0');
+putchar(b + '0');
+putchar(32);
+putchar(c + '0');
+putchar(d + '0');
+if (!(a == 9 && b == 8))
 {putchar(',');
 putchar(' ');
 }
 }
 }
-num3++;
 }
-num2++;
-}
-num1++;
 }
 putchar('\n');
+
 return (0);
 }
+
