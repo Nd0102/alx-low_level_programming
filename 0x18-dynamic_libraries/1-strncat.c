@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - check code
+ * _strncat - check code
  * @dest: input
  * @src: input
+ * @n: input
  * Return: check function declaration
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -18,7 +19,7 @@ char *_strcat(char *dest, char *src)
 	i++;
 	}
 	j = i;
-	while (src[j - i] != '\0')
+	while (src[j - i] != '\0' && j - i < n)
 	{
 		dest[j] = src[j - i];
 	j++;
